@@ -10,6 +10,7 @@ export interface Project {
     telegram?: string;
     website?: string;
     tags?: string[]; // örneğin ["Solana", "Memecoin"]
+    image?: string;
   }
   
   export const dummyProjects: Project[] = [

@@ -9,13 +9,17 @@ const withAuth = (WrappedComponent: React.FC) => {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-      setMounted(true);
-      if (typeof window !== "undefined" && !isLoggedIn()) {
-        router.replace("/");
+      if (typeof window !== "undefined") {
+        setMounted(true);
+        if (!isLoggedIn()) {
+          router.replace("/");
+        }
       }
     }, []);
 
-    if (!mounted) return null;
+    if (!mounted) {
+      return <div className="text-white text-center">Yükleniyor...</div>;
+    }
 
     return <WrappedComponent />;
   };

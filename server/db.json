@@ -1,0 +1,73 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "codex_pbc",
+      "key": 20,
+      "followers": 1043,
+      "tweets": 0,
+      "lists": 8,
+      "created": "11mo",
+      "twitter": "https://twitter.com/codexpbc",
+      "website": "https://codexpbc.com",
+      "telegram": "https://t.me/codexpbc",
+      "image": "https://via.placeholder.com/40",
+      "tags": ["Solana"]
+    },
+    {
+      "id": 2,
+      "name": "baosonbnb",
+      "key": 12,
+      "followers": 1485,
+      "tweets": 35,
+      "lists": -1,
+      "created": "1mo",
+      "twitter": "https://twitter.com/baosonbnb",
+      "website": "https://baosonbnb.com",
+      "telegram": "https://t.me/baosonbnb",
+      "image": "https://via.placeholder.com/40",
+      "tags": ["BSC", "Memecoins"]
+    }
+    ,
+    {
+        "id": 3,
+        "name": "solana",
+        "key": 10,
+        "followers": 2000,
+        "tweets": 100,
+        "lists": 5,
+        "created": "2mo",
+        "twitter": "https://twitter.com/solana",
+        "telegram": "https://t.me/solana",
+        "website": "https://solana.com",
+        "image": "https://cryptologos.cc/logos/solana-sol-logo.png",
+        "tags": ["Solana", "Blockchain"]
+        }
+    ,
+    {
+      "id": 4,
+      "name": "ethereum",
+      "key": 15,
+      "followers": 3000,
+      "tweets": 150,
+      "lists": 10,
+      "created": "3mo",
+      "twitter": "https://twitter.com/ethereum",
+      "website": "https://ethereum.org",
+      "telegram": "https://t.me/ethereum",
+      "image": "https://via.placeholder.com/40",
+      "tags": ["Ethereum", "Blockchain"]
+    }   
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "nickname": "theodore2",
+      "fullName": "Arda Çimen",
+      "email": "arda@example.com",
+      "password": "1234",  
+      "favProjectIds": []
+    }
+  ]
+}
