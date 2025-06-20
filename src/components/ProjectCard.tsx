@@ -1,4 +1,4 @@
-import { Project } from "../lib/fakeProjects";
+import { Project } from "../types/project";
 import {
   FaTwitter,
   FaTelegramPlane,
@@ -14,16 +14,19 @@ interface Props {
 }
 
 export default function ProjectCard({ project, liked, onLikeToggle }: Props) {
+  const fallbackImage = "/fallback-logo.png";
+  const isValidImage = project.image && project.image.trim() !== "";
+
   return (
     <div className="flex justify-between items-center p-4 bg-gray-900 rounded-xl shadow-md text-white mb-4 hover:bg-gray-800 transition">
       {/* Sol kısım */}
       <div className="flex items-center gap-4">
         <img
-          src={project.image || "/fallback-logo.png"}
+          src={isValidImage ? project.image : fallbackImage}
           alt={project.name}
           onError={(e) => {
             e.currentTarget.onerror = null;
-            e.currentTarget.src = "/fallback-logo.png";
+            e.currentTarget.src = fallbackImage;
           }}
           className="w-10 h-10 rounded-full object-cover border border-gray-700"
         />
@@ -32,7 +35,7 @@ export default function ProjectCard({ project, liked, onLikeToggle }: Props) {
           <div className="text-xl font-semibold">{project.name}</div>
           {project.tags && (
             <div className="flex gap-2 mt-1">
-              {project.tags.map((tag, i) => (
+              {project.tags.map((tag: string, i: number) => (
                 <span
                   key={i}
                   className="text-xs bg-gray-700 text-white px-2 py-1 rounded-full"

@@ -55,19 +55,40 @@
       "twitter": "https://twitter.com/ethereum",
       "website": "https://ethereum.org",
       "telegram": "https://t.me/ethereum",
-      "image": "https://via.placeholder.com/40",
+      "image": "https://i.imgur.com/Vp4tBfZ.png",
       "tags": ["Ethereum", "Blockchain"]
-    }   
-  ],
+    },
 
-  "users": [
     {
-      "id": 1,
-      "nickname": "theodore2",
-      "fullName": "Arda Çimen",
-      "email": "arda@example.com",
-      "password": "1234",  
-      "favProjectIds": []
+      "id": 5,
+      "name": "deneme",
+      "key": 1522,
+      "followers": 4000,
+      "tweets": 1540,
+      "lists": 10,
+      "created": "3mo",
+      "twitter": "https://twitter.com/ethereum",
+      "website": "https://ethereum.org",
+      "telegram": "https://t.me/ethereum",
+      "image": "https://wrongurl.com/no.png",
+      "tags": ["Ethereum", "Blockchain"]
+    },
+
+    {
+      "id": 5,
+      "name": "arda",
+      "key": 1312,
+      "followers": 4000,
+      "tweets": 210,
+      "lists": 121,
+      "created": "3mo",
+      "twitter": "https://twitter.com/ethereum",
+      "website": "https://ethereum.org",
+      "telegram": "https://t.me/ethereum",
+      "image": "https://wrongurl.com/no.png",
+      "tags": ["arda", "Blockchacimenin"]
     }
   ]
+
+  
 }

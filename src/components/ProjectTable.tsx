@@ -1,5 +1,4 @@
-import { Project } from "../lib/fakeProjects";
-
+import { Project } from "../types/project";
 interface Props {
   projects: Project[];
 }
