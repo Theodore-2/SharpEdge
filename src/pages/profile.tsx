@@ -1,6 +1,5 @@
 import withAuth from "../components/withAuth";
 import { useEffect, useState } from "react";
-import { Project } from "../lib/fakeProjects";
 
 interface User {
   id: number;

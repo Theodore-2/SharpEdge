@@ -9,18 +9,22 @@ const WebSocketContext = createContext<WebSocketContextType>({
   projects: [],
 });
 
-export const WebSocketProvider = ({ children }: { children: React.ReactNode }) => {
+export const WebSocketProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    fetch("http://server.sharpedge.local:8080/projects")
+    fetch("http://31.57.33.73:8080/projects")
       .then((res) => res.json())
       .then((initialProjects: Project[]) => {
         setProjects(initialProjects);
       })
       .catch((err) => console.error("Initial fetch failed:", err));
 
-    const ws = new WebSocket("ws://server.sharpedge.local:8080/");
+    const ws = new WebSocket("ws://31.57.33.73:8080/");
 
     ws.onopen = () => {
       console.log("✅ WebSocket bağlantısı kuruldu");
@@ -29,7 +33,6 @@ export const WebSocketProvider = ({ children }: { children: React.ReactNode }) =
     ws.onmessage = (event) => {
       try {
         const data: Project = JSON.parse(event.data);
-
         setProjects((prev) => {
           const exists = prev.some((p) => p.id === data.id);
           return exists ? prev : [...prev, data];
